@@ -30,14 +30,32 @@ body {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
     margin-bottom: $spacing-unit / 2;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 100;
+    margin-bottom: 0.2rem;
+}
 
+h1 {
+    font-size: 2.825rem;
+}
+
+h2 {
+    font-size: 2.325rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
 
 /**
  * Images
@@ -79,28 +97,14 @@ li {
 
 
 /**
- * Headings
- */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: $base-font-weight;
-}
-
-
-
-/**
  * Links
  */
 a {
-    color: $brand-color;
+    color: $blue_bright;
     text-decoration: none;
 
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
-
     &:hover {
-        color: $text-color;
-        text-decoration: underline;
+        color: $blue;
     }
 }
 
@@ -155,7 +159,7 @@ pre {
 /**
  * Wrapper
  */
-.wrapper {
+.container {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
     margin-right: auto;
