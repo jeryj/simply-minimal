@@ -2,7 +2,7 @@
  * Site header
  */
 .site-header {
-    border-top: 7px solid $blue_bright;
+
 }
 
 .site-title {
@@ -12,25 +12,34 @@
     line-height: 1;
     font-weight: 100;
     text-align: center;
-
-    a {
-        color: #111;
-    }
 }
 
 .site-tagline {
     font-size: 1.2rem;
     font-weight: 200;
     text-align: center;
-    color: $salmon;
+    color: $red;
 }
 
 .site-nav {
     display: flex;
     justify-content: center;
+    padding: .4rem;
+    border-top: 1px solid $gray_dark;
+    border-bottom: 1px solid $gray_dark;
 
     .page-link {
-        color: $text-color;
+        color: $gray_dark;
+        font-weight: 100;
+        margin-right: 1em;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        &:hover {
+            color: $black;
+        }
     }
 }
 
@@ -40,12 +49,17 @@
  * Site footer
  */
 .site-footer {
-    background: $blue;
+    background: $gray_light;
     padding: $spacing-unit 0;
 }
 
 .footer-heading {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: 0;
+}
+
+.footer-link {
+    color: $red;
+    margin-left: 10px;
 }
 
 
@@ -57,21 +71,27 @@
 }
 
 .page-heading {
-    font-size: 20px;
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 
 .post-list {
     margin-left: 0;
     list-style: none;
+}
 
-    > li {
-        margin-bottom: $spacing-unit;
-    }
+.post-list__item {
+    margin-bottom: $spacing-unit;
+    position: relative;
+}
+
+.post-content {
+    padding: 0 0 $spacing-unit/2;
 }
 
 .post-meta {
     font-size: $small-font-size;
-    color: $salmon;
+    color: $red;
     font-weight: 100;
 }
 
@@ -80,8 +100,9 @@
     font-size: 24px;
 }
 
+.post-list__item__image {
 
-
+}
 /**
  * Posts
  */
@@ -93,6 +114,20 @@
     line-height: 1.2;
 }
 
+.post-featured-image {
+    margin-bottom: 1.6em;
+}
+
 .post-content {
     margin-bottom: $spacing-unit;
+}
+
+.recipe {
+    padding: $spacing-unit/2;
+    border: 2px dashed $gray;
+}
+
+.recipe-ingredients,
+.recipe-steps {
+    margin-left: 1em;
 }

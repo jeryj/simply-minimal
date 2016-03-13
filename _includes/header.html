@@ -5,11 +5,13 @@
     <h2 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h2>
     <p class="site-tagline">Recipes for a Beautiful Life</p>
     <nav class="site-nav">
+        <a class="page-link" href="{{ site.baseurl }}/">Recipes</a>
         {% for my_page in site.pages %}
           {% if my_page.title %}
           <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
           {% endif %}
         {% endfor %}
+
     </nav>
 
   </div>
