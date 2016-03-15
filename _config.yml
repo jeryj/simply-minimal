@@ -1,0 +1,18 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Simply Minimal
+email: hello@jeremyjon.es
+description: > # this means to ignore newlines until "baseurl:"
+  Minimal Recipes for a Simple Life
+baseurl: "/simply-minimal" # the subpath of your site, e.g. /blog
+url: "http://jeryj.github.io" # the base hostname & protocol for your site
+twitter_username: juryjowns
+
+# Build settings
+markdown: kramdown

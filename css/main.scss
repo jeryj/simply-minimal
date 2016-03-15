@@ -1,0 +1,54 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   18px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.6;
+
+$spacing-unit:     3.2em;
+
+$text-color:       #333;
+$background-color: #fdfdfd;
+$brand-color:      #111;
+$black:            #111;
+$red:              #DB504A;
+
+$gray:       #ddd;
+$gray_light: #f2f2f2;
+$gray_dark:  #666;
+
+// Width of the content area
+$content-width:    42em;
+
+$on-palm:          32em;
+$on-laptop:        42em;
+
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout"
+;
