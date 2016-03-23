@@ -62,6 +62,20 @@
     margin-left: 10px;
 }
 
+.twitter-link {
+    position: relative;
+    top: 3px;
+    
+    svg {
+        width: 24px;
+    }
+
+}
+
+.twitter-icon {
+    fill: $red;
+}
+
 
 /**
  * Page content

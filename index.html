@@ -4,23 +4,47 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Recipes</h1>
 
-  <ul class="post-list">
     {% for post in site.posts %}
-      <li class="post-list__item">
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-            <h2>
-              {{ post.title }}
-            </h2>
-            <img class="post-list__item__image" src="{{site.baseurl}}/images/{{post.image}}" />
-        </a>
 
 
-      </li>
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h2 class="post-title" itemprop="name headline"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+          <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+
+          <img class="post-featured-image" src="{{site.baseurl}}/images/{{post.image}}" />
+
+          {{ post.content }}
+
+          <section class="recipe">
+              <h2 class="recipe__section-title">Recipe</h2>
+              <div class="recipe__card">
+                  <h3 class="recipe__title">{{post.title}}</h3>
+                  <h3>Ingredients</h3>
+                  <ul class="recipe__ingredients">
+                      {% for ingredient in post.ingredients %}
+                          <li>{{ ingredient }}</li>
+                      {% endfor %}
+                  </ul>
+                  <h3>Directions</h3>
+                  <ol class="recipe__steps">
+                      {% for steps in post.recipe %}
+                          <li>{{ steps.step }}</li>
+                      {% endfor %}
+                  </ol>
+              </div>
+          </section>
+
+      </div>
+
+      </article>
+
     {% endfor %}
-  </ul>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
