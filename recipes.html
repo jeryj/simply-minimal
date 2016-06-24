@@ -1,0 +1,19 @@
+---
+layout: page
+title: Recipes
+permalink: /recipes/
+---
+
+<ul class="post-list">
+{% for post in site.posts %}
+  <li class="post-list__item">
+    <a class="post-list__link" href="{{ post.url | prepend: site.baseurl }}">
+        <span class="post-meta post-list__post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <h2 class="post-list__title">{{ post.title }}</h2>
+        <img class="post-list__image" src="{{site.baseurl}}/images/{{ post.image }}" />
+    </a>
+  </li>
+{% endfor %}
+</ul>
+
+<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>

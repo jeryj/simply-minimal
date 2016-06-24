@@ -65,7 +65,7 @@
 .twitter-link {
     position: relative;
     top: 3px;
-    
+
     svg {
         width: 24px;
     }
@@ -110,12 +110,37 @@
     font-weight: 100;
 }
 
-.post-link {
+.post-list {
     display: block;
-    font-size: 24px;
+
+    @media (min-width: 580px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
 }
 
-.post-list__item__image {
+.post-list__item {
+
+    @media (min-width: 580px) {
+        max-width: 20rem;
+        margin: 0 2rem 2rem 0;
+
+        &:nth-child(even) {
+            margin-right: 0;
+        }
+    }
+}
+
+.post-list__post-meta {
+    color: $text-color;
+}
+
+.post-list__title {
+    font-size: 1.675rem;
+}
+
+.post-list__image {
 
 }
 /**

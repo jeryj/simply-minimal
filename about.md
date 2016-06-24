@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About Us
+title: About
 permalink: /about/
 ---
 
-Brock Lee and Julie Ann are a team of chefs, crafting our skills over decades of inventive recipes.
+We, Brock Lee and Julie Ann, are a team of chefs, crafting our skills over decades of inventive recipes.
